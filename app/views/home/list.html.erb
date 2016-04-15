@@ -1,0 +1,28 @@
+<div class="alert alert-success" role="alert" style="margin-top: 50px;">
+    <strong style="font-size: 32px">Congratulations!</strong><br>
+                                    Your e-mail has been successfully sent!</div>
+<div class="table-responsive">
+    <table class="table" style="margin-top: 50px;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>e-mail</tH>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @every_post.each do |p| %>
+            <tr>
+                <th><%= p.id %></th>
+                <td><%= p.email %></td>
+                <td><%= p.title %></td>
+                <td><%= p.content %></td>
+                <td><%= p.created_at.in_time_zone("Asia/Seoul") %></td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>   
+</div>
+<button type="button" class="btn btn-secondary btn-lg" style="position: relative; margin-top: 85px; float:right;"><a href="/">Back to First Screen</a></button>
