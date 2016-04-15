@@ -1,6 +1,4 @@
-<div class="alert alert-success" role="alert" style="margin-top: 50px;">
-    <strong style="font-size: 32px">Congratulations!</strong><br>
-                                    Your e-mail has been successfully sent!</div>
+<h1>iList <small>All sent e-mails</small></h1>
 <div class="table-responsive">
     <table class="table" style="margin-top: 50px;">
         <thead>
@@ -20,9 +18,11 @@
                 <td><%= p.title %></td>
                 <td><%= p.content %></td>
                 <td><%= p.created_at.in_time_zone("Asia/Seoul") %></td>
+                <td><button type="button" class="btn btn-info-outline"><a href="/update_prompt/<%= p.id %>">Modify</a></button></td>
+                <td><button type="button" class="btn btn-info-outline"><a href="/destroy/<%= p.id %>">Delete</a></button></td>
             </tr>
             <% end %>
         </tbody>
     </table>   
 </div>
-<button type="button" class="btn btn-secondary btn-lg" style="position: relative; margin-top: 85px; float:right;"><a href="/">Back to First Screen</a></button>
+<button type="button" class="btn btn btn-warning" style="position: relative; margin-top: 85px; float:right;"><a href="/">Back to First Screen</a></button>

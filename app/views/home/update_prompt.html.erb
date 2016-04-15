@@ -1,0 +1,27 @@
+<h1>iUpdate <small>Database</small></h1>
+
+
+<!-- action이랑 method 꼭 지정해주자  -->
+
+<!-- form에서 data를 받을 때 route하는 주소에서 id parameter 반영 -->
+<form action="/update_confirm/<%= @one_post.id %>" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Recipient</label>
+    <!-- Placeholder 대신 원래 작성한 text가 위치해야 한다. -->
+    <!-- 그러니간 지워주고 "value=@one_post.xxxxx" 로 바꿔준다 -->
+    <input name = "email" type="email" class="form-control" id="email" value="<%= @one_post.email %>">
+  </div>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" name = "title" class="form-control" id="title" value="<%= @one_post.title %>">
+  </div>
+    <div class="form-group">
+    <label for="content">Content</label>
+    
+    <!-- TextArea는 "value=xxx"로 하면 안되고 <textarea> [이 사이에 넣는게 기본값] </textarea> -->
+    <textarea name = "content" class="form-control" rows="5" id="content"><%= @one_post.content %></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Confirm</button>
+</form>
+
+<button type="button" class="btn btn btn-warning" style="position: relative; margin-top: 200px; float: right;"><a href="/list">Cancel</a></button>

@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   get '/index' => 'home#index'
   post '/write' => 'home#write'
   get '/list' => 'home#list'
+  
+  # ":post_id" => 이것을 parameter로 넘기겠다는 뜻
+  get '/destroy/:post_id' => 'home#destroy'
+  get '/update_prompt/:post_id' => 'home#update_prompt'
+  post '/update_confirm/:post_id' => 'home#update_confirm'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
