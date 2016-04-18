@@ -17,7 +17,7 @@
 body {
     background-image:url('../assets/logo.png');
     background-repeat: no-repeat;
-    background-position: center center;
     background-attachment: fixed;
     background-size: 12.5%;
+    background-position: center center;
 }

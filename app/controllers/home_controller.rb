@@ -14,7 +14,8 @@ class HomeController < ApplicationController
 
     # Try sending an e-mail only if checkbox is checked
     # Q. How do I check whether the checkbox has been selected or not??
-    if params[:checkbox] == true
+    
+    # if params[:checkbox] == true
         mg_client = Mailgun::Client.new("key-8eeac9ac9b7aeb89b7c08e688bdfba47")
     
         message_params =  {
@@ -30,7 +31,7 @@ class HomeController < ApplicationController
         message = result['message']
         
         
-    end
+    # end
     
     @one_post.save
     
