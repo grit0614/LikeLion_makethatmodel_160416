@@ -8,12 +8,13 @@ gem 'railgun'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 
-# C9에선 sqlite3만 ㅆ고, Heroku에선 pg만 쓰니깐
+# C9에선 sqlite3만 쓰고, Heroku에선 pg만 쓰니깐
 # 둘다 들고와서, 어디서 뭘 쓸지 지정해줘야함
 # C9(development), Heroku(production)은 서로의 기본값
 # production 모드에서는 에러메세지 안찍어줌
 gem 'sqlite3', :group => :development
 gem 'pg', :group => :production
+gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
