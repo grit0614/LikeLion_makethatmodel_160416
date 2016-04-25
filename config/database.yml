@@ -22,5 +22,8 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
   encoding: unicode
+  adapter: postgresql
+  host: localhost
+  username: user
+  database: app-dev
